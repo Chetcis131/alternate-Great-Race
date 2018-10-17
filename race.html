@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel = "Stylesheet" type = "text/css" href = "Stylesheet.css" />
+  <style>
+  body{
+   background-image:url('Space.jpg');
+    background-repeat:no-repeat;
+  }
+  </style>
+  
+   <script>
+    
+    
+    var randleng;
+
+  function resetRace()
+  {
+   window.location.reload();
+  }
+
+//PLACED THE POS1 & POS2 OUTSIDE OF THE FUNCTION
+    var pos1 = 0;
+    var pos2 = 0;
+
+  function startRace() 
+  {
+    var myVar1 = setInterval(startRace, 1000);
+    var ranNum = Math.floor(Math.random()*2);
+    randleng = Math.floor(Math.random()*5);
+
+    if(ranNum == 0)
+    {
+      var leng1 = pos1 + randleng;
+      pos1+=randleng;
+      document.getElementById("Nasa").style.left = leng1 + "px";
+    } 
+
+      else if (ranNum == 1)
+      {
+        var leng2 = pos2 + randleng;
+        pos2+=randleng;
+        document.getElementById("SpaceX").style.left = leng2 + "px";
+      }
+  
+  //NOW THEY JUST NEED TO STOP FLYING OFF INTO TIME AND SPACE
+
+      if (pos1 == 1100)
+      {
+        alert("Nasa wins");
+        stopRockets();
+      }
+    
+      else if (pos2 == 1100)
+      {
+        alert("Musk wins");
+        stopRockets();
+      }
+
+  function stopRockets()
+  {
+    clearInterval(myVar1);
+  }
+
+      
+    
+  }
+  </script>
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>The Great Race!</title>
+</head>
+
+  <body>
+      
+         
+    <img style="width:150px; height:inherit; position:absolute; top:400px;" src="SpaceX.gif" id="SpaceX"/>
+    <img style="width:150px; height:inherit; position:absolute; top:500px;" src="Nasa.gif" id="Nasa"/>
+    <img style="width:200px; height:inherit; position:absolute; right:0px; cursor:pointer;" src="Red.png" id="resetButton" onclick="resetRace()"/>
+    <img style="width:200px; height:inherit; cursor:pointer;" src="green.png" id="startButton" onclick="startRace()"/>
+
+  </body>
+
+</html>
