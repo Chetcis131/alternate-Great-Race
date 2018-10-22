@@ -2,16 +2,16 @@ var randleng;
 var var1;
 function resetRace()
 {
-  document.getElementById("startButton").src="Red.png"
+  getElementById("startRace").src="Red.png"
 // window.location.reload();
 }
 
-//var for each rocket
+//PLACED THE POS1 & POS2 OUTSIDE OF THE FUNCTION
   var pos1 = 0;
   var pos2 = 0;
 function start(){
     myVar1 = setInterval(startRace, 4);
-    document.getElementById("startButton").src="green.png"
+    getElementById("startRace").src="green.png"
 
 }
 function startRace() 
