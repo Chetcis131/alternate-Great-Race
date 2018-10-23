@@ -1,17 +1,19 @@
 var randleng;
-var var1;
+
 function resetRace()
 {
-  getElementById("startRace").src="Red.png"
-// window.location.reload();
+  getElementById("startButton").src="Red.png"
+
+
 }
 
-//PLACED THE POS1 & POS2 OUTSIDE OF THE FUNCTION
+
+//variables for each rocket position
   var pos1 = 0;
   var pos2 = 0;
 function start(){
     myVar1 = setInterval(startRace, 4);
-    getElementById("startRace").src="green.png"
+    document.getElementById("startButton").src="green.png"
 
 }
 function startRace() 
@@ -37,7 +39,7 @@ function startRace()
 
     if (leng1 >= 900)
     {
-      document.body.innerHTML = 'center<img src="trump.png" + "button.png"></img>';
+      document.body.innerHTML = '<img src="trump.png" + "button.png"></img>';
       //document.write('<img src="Musk.png">');
      // alert("Musk wins");
       stopRockets();
@@ -45,7 +47,7 @@ function startRace()
   
     else if ( leng2 >= 900)
     {
-      document.body.innerHTML = 'center<img src="Musk.png"+ "button.png"></img>';
+      document.body.innerHTML = '<img src="Musk.png"+ "button.png"></img>';
       //document.write('<img src="trump.jpg">');
       //alert("trump wins");
       stopRockets();
@@ -56,6 +58,7 @@ function stopRockets()
   clearInterval(myVar1);
 }
 
-    
+
+
   
 }
