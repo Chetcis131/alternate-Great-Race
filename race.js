@@ -35,11 +35,11 @@ function startRace()
       document.getElementById("SpaceX").style.left = leng2 + "px";
     }
 
-//NOW THEY JUST NEED TO STOP FLYING OFF INTO TIME AND SPACE
+//length of race and winner
 
     if (leng1 >= 900)
     {
-      document.body.innerHTML = '<img src="trump.png" + "button.png"></img>';
+      document.body.innerHTML = '<img src="trump.png" ></img>';
       //document.write('<img src="Musk.png">');
      // alert("Musk wins");
       stopRockets();
@@ -47,7 +47,7 @@ function startRace()
   
     else if ( leng2 >= 900)
     {
-      document.body.innerHTML = '<img src="Musk.png"+ "button.png"></img>';
+      document.body.innerHTML = '<img src="Musk.png"></img>';
       //document.write('<img src="trump.jpg">');
       //alert("trump wins");
       stopRockets();
@@ -57,8 +57,10 @@ function stopRockets()
 {
   clearInterval(myVar1);
 }
-
-
-
-  
+//if (winner == trump){
+//document.getElementById("trump").addEventListener("click", resetRace);
+//}
+//else {
+//document.getElementById("Musk").addEventListener("click", resetRace);
+//}
 }
